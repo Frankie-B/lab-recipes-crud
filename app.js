@@ -32,7 +32,6 @@ app.use(express.static('public'));
 
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/recipes'));
-// app.use('/', require('./routes/oneRecipe'));
 
 app.listen(app.get('PORT'), () => {
   console.log('listening on port', app.get('PORT'));

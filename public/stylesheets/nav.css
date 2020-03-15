@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
