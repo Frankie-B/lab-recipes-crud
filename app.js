@@ -1,16 +1,15 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const path = require('path');
 const hbs = require('hbs');
 
 // const bodyParser = require('body-parser');
 // app.use(bodyParser.urlencoded({ extended: false }));
 
-app.set('PORT', 3000);
+//on the localhost here the db is called recipe-app-dev :)
 
 mongoose
-  .connect('mongodb://localhost/recipe-dev-app', {
+  .connect('mongodb://localhost/recipe-app-dev', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -25,14 +24,15 @@ mongoose
   });
 
 // set up handlebars
+app.set('PORT', 3000);
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.set('views', __dirname + '/views'); // added
 hbs.registerPartials(__dirname + '/views/partials');
+app.use(express.static('public'));
 
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/recipes'));
+// app.use('/', require('./routes/oneRecipe'));
 
 app.listen(app.get('PORT'), () => {
   console.log('listening on port', app.get('PORT'));
