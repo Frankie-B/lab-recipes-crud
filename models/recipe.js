@@ -15,7 +15,10 @@ const recipeSchema = new Schema({
     default: 'https://images.media-allrecipes.com/images/75131.jpg',
   },
   duration: Number,
-  creator: String,
+  creator: {
+    type: mongoose.Types.ObjectId,
+    ref: 'cooks',
+  },
   created: Object,
 });
 

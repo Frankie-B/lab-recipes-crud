@@ -1,0 +1,16 @@
+{{!-- recipe template for one recipe  --}}
+<div class="recipe-main">
+  <a class="recipe-container">
+  <div class="recipe-card">
+        <div class="recipe-header">
+        <h3>{{this.title}}</h3>
+        <h5>{{this.cuisine}}</h5>
+    </div>
+    <div class="recipe-body">
+        <img class="recipe-thumb" src="{{this.image}}" alt="">
+        <a href="recipes/list/{{this._id}}">Click for more details</a>
+        <a href="recipes/delete/{{_id}}"><button class="recipe-btn">Delete Recipe</button></a>       
+    </div>
+  </div>
+  </a>
+</div>

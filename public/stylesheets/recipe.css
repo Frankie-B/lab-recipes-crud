@@ -1,0 +1,33 @@
+.recipe-main {
+  display: flex;
+  width: 50%;
+}
+
+. recipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recipe-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+}
+
+.recipe-header {
+  width: 100%;
+}
+
+.recipe-body {
+  width: 100%;
+}
+
+.recipe-thumb {
+  display: inline-block;
+  width: 200px;
+}
